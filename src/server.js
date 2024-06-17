@@ -8,7 +8,7 @@ const port = process.env.PORT
 mongoose.connect(
     process.env.MONGO_URL,
     {}).then(result => {
-        console.log("Mongodb database is connected")
+        console.log("Mongodb is connected")
         app.listen(port, () => {
           console.log(`Techy store app listening on port ${port}`)
         })  
