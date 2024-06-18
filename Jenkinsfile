@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                bat 'docker build . -t techy-store-server'
+                sh 'docker build . -t techy-store-server'
             }
         }
         stage('Run Docker Image') {
             steps {
-                bat 'docker run -d --name techy-store-server -p 3001:3001 techy-store-server'
+                sh 'docker run -d --name techy-store-server -p 3001:3001 techy-store-server'
             }
         }
     }
